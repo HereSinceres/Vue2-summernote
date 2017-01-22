@@ -1,0 +1,25 @@
+<html>
+<meta charset="UTF-8">
+<title>VUE2 summernote DEMO</title>
+<!--summernote 依赖jquery-->
+<!-- include libraries(jQuery, bootstrap) -->
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+<!--summernote 依赖(jQuery, bootstrap)-->
+<link href="http://cdn.bootcss.com/summernote/0.8.2/summernote.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/summernote/0.8.2/summernote.min.js"></script>
+<script src="http://cdn.bootcss.com/vue/2.1.10/vue.js"></script>
+<script src="./vue_editor.js"></script>
+
+<body>
+    <div id="app">
+        {{editorModel}}
+        <vue-editor :model="editorModel" v-on:modelchange="modelChangeEvent"> </vue-editor>
+        <!--<button v-on:click="setDate">设置数据</button>-->
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
